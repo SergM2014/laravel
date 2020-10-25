@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('example', function(){
+            return new \App\Models\Example;
+        });
+
     }
 
     /**
